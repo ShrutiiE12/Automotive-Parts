@@ -1,0 +1,31 @@
+<!-- Assuming your component's HTML file, e.g., customer-header.component.html -->
+
+<div class="sidebar">
+    <!-- Sidebar content -->
+    <img src="../../../assets/images/logo.jpeg" alt="Sidebar Image" class="sidebar-image"><br>
+   <div class="menu-list">
+    <div (click)="routerToLink('/admin/home')" [class.selected]="url === '/admi/home'">Home</div>
+    <div (click)="routerToLink('/admin/addproduct')" [class.selected]="url === '/admin/addproduct'">Add Product</div>
+    <div (click)="routerToLink('/admin/listproduct')" [class.selected]="url === '/admin/listproduct'">List Product</div>
+    <div (click)="routerToLink('/admin/orderlist')" [class.selected]="url === '/admin/orderlist'">Order List</div>
+   </div>
+  
+    <!-- User menu -->
+    <div [matMenuTriggerFor]="menu" class="user-name-item">
+      <div>{{ userName }}&nbsp; <span class="py-3"><mat-icon>expand_more</mat-icon></span></div>
+    </div>
+  </div>
+  
+  <!-- Content area -->
+  <div class="content">
+    <!-- Your main content goes here -->
+    <!-- ... -->
+  </div>
+  
+  <!-- Mat menu for the user -->
+  <mat-menu #menu="matMenu">
+    <button (click)="routerToLink('/admin/logout')" mat-menu-item>
+      <mat-icon>logout</mat-icon> Logout
+    </button>
+  </mat-menu>
+  

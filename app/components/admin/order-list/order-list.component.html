@@ -1,0 +1,26 @@
+<div *ngIf="orderList.length  >0" class="centered">
+    <table class="table table-bordered">
+        <thead class="table-primary">
+            <tr>
+                <th>Customer Id</th>
+                <th>Order Date</th>
+                <th>Total price</th>
+                <th>Order Status</th>
+              <!-- <th>Payment Status</th> -->  
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let order of orderList">
+                <td>{{order?.customer?.customerId}}</td>
+                <td>{{order?.customer?.createdAt | date}}</td>
+                <td>{{order?.orderPrice}}</td>
+                <td>{{order?.orderStatus === 'success' ? 'Order not confirmed' : order?.orderStatus}}</td>
+              <!-- <td>{{order?.orderStatus === 'success' ? 'Order not confirmed' : order?.orderStatus}}</td> --> 
+            </tr>
+        </tbody>
+    </table>
+
+</div>
+<div *ngIf="orderList.length === 0">
+    <h1 style="text-align: center;">Orders not found.</h1>
+</div>

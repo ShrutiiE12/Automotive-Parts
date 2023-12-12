@@ -1,0 +1,16 @@
+<!-- <div class="main">
+    <div><img src="../../../assets/images/logo.jpeg" width="10%" height="90%"></div>
+    <div (click)="gotourl('home')" [class.selected]="url === '/home'">Home</div>
+    <div (click)="gotourl('customer-login')" [class.selected]="url === '/customer-login'">Customer Login</div>
+    <div (click)="gotourl('about-us')" [class.selected]="url === '/about-us'">About Us</div>
+    <div (click)="gotourl('contact-us')" [class.selected]="url === '/contact-us'">Contact us </div>
+    <div (click)="gotourl('admin-login')" [class.selected]="url === '/admin-login'">Admin Login</div><br>
+</div> -->
+    <ul class="main">
+        <li><img src="../../../assets/images/logo.jpeg" width="10%" height="90%"></li>
+        <li><a routerLink="/home" routerLinkActive="selected" >Home</a></li>
+        <li><a routerLink="/customer-login" routerLinkActive="selected" >Customer-login</a></li>
+        <li><a routerLink="/about-us" routerLinkActive="selected" >About-us</a></li>
+        <li><a routerLink="/contact-us" routerLinkActive="selected" >Contact-us</a></li>
+        <li><a routerLink="/admin-login" routerLinkActive="selected" >Admin-login</a></li><br>
+    </ul>

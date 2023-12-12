@@ -1,0 +1,30 @@
+/* Add this CSS to your component's style file, e.g., styles.css or styles.scss */
+
+.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Adjust as needed */
+    margin-left: 10%;
+    margin-top: 12%;
+  }
+  
+  table {
+    border-collapse: collapse;
+    width: 80%; /* Adjust the width as needed */
+  }
+  tr,th,td{
+    padding: 8px;
+  }
+  th, td {
+    border: 1px solid #dddddd;
+    text-align: left;
+   
+  }
+  
+  
+  /* Optional: Add some styling to alternate rows for better readability */
+  tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  

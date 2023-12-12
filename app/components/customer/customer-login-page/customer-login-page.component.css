@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0; /* Light gray background */
+}
+
+header {
+    background-color: #fff;
+    height: 100px;
+    color: #333; /* Dark gray text color */
+    text-align: center;
+    line-height: 100px;
+    position: relative;
+}
+
+.main {
+    background-color: #fff; /* White background */
+    color: #333; /* Dark gray text color */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px; /* Adjusted width for the login form */
+  }
+
+.login-form {
+    max-width: 500px;
+    background-color: #fff; /* White background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.error-message {
+    color: #dc3545;
+    margin-bottom: 10px;
+}
+
+.security-info {
+    font-size: 12px;
+    color: #6c757d;
+}
+
+footer {
+    background-color: #fff;
+    height: 60px;
+    color: #333; /* Dark gray text color */
+    text-align: center;
+    line-height: 60px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+.customer-login{
+    max-width: 780px;
+    margin:10%  auto;
+}
+input{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+.new-user-register span{
+    color: #35b0dc;
+    text-decoration: underline;
+    cursor: pointer;
+}

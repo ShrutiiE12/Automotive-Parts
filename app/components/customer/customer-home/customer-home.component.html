@@ -1,0 +1,31 @@
+<div class="explore-menu-section pt-5 pb-5" id="exploreMenuSection">
+  <div class="container container-background">
+    <div class="row">
+      <div class="col-12">
+        <h2 class="menu-section-heading">Explore Products</h2>
+      </div>
+      <!-- Loop through getCategoryList and generate cards dynamically -->
+      <div class="col-12 col-md-6 col-lg-4 pointer" *ngFor="let product of getCategoryList">
+        <div class="shadow menu-item-card mb-3">
+          <!-- Use product.image or a default image -->
+          <img src="assets/images/{{product.image}}" class="menu-item-image w-100" alt="{{ product.image }}" />
+          <h1 class="menu-card-title">{{ product.name }}</h1>
+          <div class="row" style="align-items: center;">
+            <div class="col-md-7">
+              <div class="px-3">
+                <p>{{ product.price | currency:'INR' }}</p>
+                <p>{{ product.description }}</p>
+                <p>{{ product.model }}</p>
+                <p>{{ product.brand }}</p>
+              </div>
+            </div>
+            <div class="col-md-5">
+              <button (click)="addToCart(product)" mat-raised-button color="primary">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End of dynamic category cards -->
+    </div>
+  </div>
+</div>

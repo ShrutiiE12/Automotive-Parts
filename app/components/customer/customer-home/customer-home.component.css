@@ -1,0 +1,26 @@
+.menu-item-image{
+    width: 100px;
+    height: 200px;
+    padding: 20px;
+    min-width: 200px;
+    min-height: 200px;
+}
+.menu-card-title{
+    background-color: blueviolet;
+    margin: 10px 0;
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+}
+.pointer{
+    margin-bottom: 2em;
+   cursor: pointer;
+   
+    /* border: 1px solid #ccc; */
+}
+.shadow{
+    box-shadow: 0 0 1px 1px #ccc !important;
+}
+.explore-menu-section{
+    margin: 10%;
+}

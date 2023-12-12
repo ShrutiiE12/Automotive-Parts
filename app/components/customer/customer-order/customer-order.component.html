@@ -1,0 +1,28 @@
+<br /> <br />
+<div *ngIf="orderList.length>0" class="centered">
+    <div class="container">
+        <table class="table table-bordered table-striped table-hover">
+            <thead class="table-primary">
+                <tr>
+                    <!--<th>Product Name</th>
+            <th>Product Image</th>-->
+                    <th>Customer ID</th>
+                    <th>Order Date</th>
+                    <th>Total price</th>
+                    <th>Order Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let order of orderList">
+                    <td>{{order?.customer?.customerId}}</td>
+    
+                    <!--<td>{{getDate(order?.customer)}}</td>
+                 <td>{{order?.mrpPrice}}</td> -->
+                    <td>{{order?.createdAt}}</td>
+                    <td>{{order?.orderPrice}}</td>
+                    <td>{{order?.orderStatus === 'success' ? 'Order not confirmed' : order?.orderStatus}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

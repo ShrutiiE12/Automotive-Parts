@@ -1,0 +1,40 @@
+<body>
+    <header>
+        <!-- Your header content goes here -->
+    </header>
+    <div class="container login-container">
+        <div class="login-form">
+            <h2 class="text-center">Admin Login</h2>
+
+            <!-- Username Field -->
+            <div class="form-group">
+                <label for="username">Email ID:</label>
+                <input type="text" [(ngModel)]="email" class="form-control" placeholder="Email">
+            </div>
+
+            <!-- Password Field -->
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" [(ngModel)]="password" class="form-control" placeholder="Password">
+            </div>
+
+          
+            <!-- Login Button -->
+            <button (click)="signIn()" class="btn btn-primary btn-block" >SignIn</button>
+
+
+            <!-- Error Messages -->
+            <div class="error-message">
+                <!-- Display error messages here -->
+            </div>
+
+            <!-- Security Features Info -->
+           <br> <div class="security-info mt-3">
+                This site is protected by reCAPTCHA and the Google
+                <a href="https://policies.google.com/privacy" target="_blank">Privacy Policy</a> and
+                <a href="https://policies.google.com/terms" target="_blank">Terms of Service</a> apply.
+            </div>
+        </div>
+    </div>
+
+</body>

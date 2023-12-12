@@ -1,0 +1,51 @@
+<!-- customer-login-page.component.html -->
+<div class="main customer-login">
+    <h1>Customer Login & SignUp</h1>
+    <br />
+  
+    <form [formGroup]="customerLoginForm">
+      <div class="item-icon">
+        <div class="icon"></div>
+        <input type="text" id="email" formControlName="email" placeholder="Email" class="formcontrol">
+      </div>
+      <div *ngIf="customerLoginForm.controls['email'].invalid && (customerLoginForm.controls['email'].dirty || customerLoginForm.controls['email'].touched)"
+        class="error-message">
+        <div *ngIf="customerLoginForm.controls['email'].errors?.['required']">Email should not be blank</div>
+        <div *ngIf="customerLoginForm.controls['email'].errors?.['pattern']">Enter a valid email</div>
+      </div>
+  
+      <br />
+  
+      <div class="item-icon">
+        <div class="icon"></div>
+        <input type="password" formControlName="password" placeholder="Password">
+      </div>
+  
+      <!-- Password Validation code -->
+      <div *ngIf="customerLoginForm.controls['password'].invalid && (customerLoginForm.controls['password'].dirty || customerLoginForm.controls['password'].touched)"
+        class="error-message">
+        <div *ngIf="customerLoginForm.controls['password'].errors?.['required']">Password should not be blank</div>
+        <div *ngIf="customerLoginForm.controls['password'].errors?.['minlength']">Minimum 8 characters required</div>
+      </div>
+      <!-- End of Password Validation -->
+      <br />
+  
+      <div>
+        <button (click)="signIn()" mat-raised-button color="primary"
+          [disabled]="!customerLoginForm.controls['password'].valid || !customerLoginForm.controls['email'].valid">SignIn</button>
+      </div>
+    </form>
+  
+    <br />
+  
+    <div class="new-user-register">
+      Don't have an account yet? <span class="sign-up" (click)="routeToNewUser()">Sign up Now</span>
+    </div>
+  
+    <br />
+  
+    <div class="sign-up" (click)="routeToForgotPassword()">Forgot password?</div>
+  
+    <br />
+  </div>
+  

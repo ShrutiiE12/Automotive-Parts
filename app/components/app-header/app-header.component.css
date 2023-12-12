@@ -1,0 +1,48 @@
+.main {
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.7) 50%, rgba(0, 0, 0, 1) 100%);
+    align-items: center;
+    color: #FFFFFF;
+    font-size: 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 2px;
+}
+
+ul li a.selected {
+    background: #ddd;
+    /* display: flex; */
+    height: 100%;
+    align-items: center;
+    color: #000;
+    padding: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 15px; /* Add border-radius for curved edges */
+}
+
+.main img {
+    height: 3em;
+    width: 200px;
+    border-radius: 8px; /* Optional: Add border-radius for a rounded appearance */
+}
+
+.main div {
+    cursor: pointer;
+}
+
+.sign-up {
+    color: blue;
+    cursor: pointer;
+}
+
+ul{
+    list-style: none;
+}
+ul li {
+display: inline-block;
+}
+ul li a{
+    color: #FFFFFF;
+    text-decoration: none;
+}

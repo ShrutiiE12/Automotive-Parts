@@ -1,0 +1,75 @@
+/* AddProductComponent CSS */
+.add-product-tab {
+  width: 60%;
+  margin: 20px auto;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 7px 1px;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.add-product-tab h1 {
+  text-align: center;
+  color: #333;
+  font-size: 24px; /* Increased font size */
+  font-weight: bold; /* Make it bold */
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 2px solid #ddd;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  font-size: 16px; /* Increased font size */
+}
+
+/* Style for input fields */
+input {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 4px;
+  margin-bottom: 12px;
+  resize: vertical;
+}
+
+/* Style for the button */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Alternating background colors for list items */
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Thicker margin for list items */
+.list-group-item {
+  margin-bottom: 8px;
+  font-size: 16px; /* Increased font size */
+  font-weight: bold; /* Make it bold */
+}

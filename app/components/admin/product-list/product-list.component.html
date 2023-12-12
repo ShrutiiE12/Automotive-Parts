@@ -1,0 +1,56 @@
+<div class="centered">
+    <mat-button-toggle-group [value]="category" (change)="getProductByCategory($event)">
+        <mat-button-toggle *ngFor="let item of getCategoryList" [value]="item">{{item?.name}}</mat-button-toggle>
+    </mat-button-toggle-group>
+</div>
+<br />
+
+<div *ngIf="productList.length===0" class="centered">
+    No product is available in the list
+</div>
+
+<div *ngIf="productList.length > 0" class="centered">
+    <table class="table table-bordered">
+       <thead class="primary">
+         <tr>
+            <th>Product Id</th>
+            <th>Product Name</th>
+            <th>Product Description</th>
+            <th>Product Image</th>
+            <th>Product Price</th>
+            <th>Product Model</th>
+            <th>Product Brand</th>
+        </tr>
+       </thead>
+        <tbody>
+            <tr *ngFor="let product of productList">
+                <td>{{product?.pid}}</td>
+                <td>{{product?.name}}</td>
+                <td>{{product?.description}}</td>
+                <td><img src="assets/images/{{product?.image}}" width="100" /></td>
+                <td>{{product?.price}}</td>
+                <td>{{product?.model}}</td>
+                <td>{{product?.brand}}</td>
+                <td>
+                    <button (click)="editProduct(product)" mat-raised-button color="primary">Edit</button>&nbsp;
+                    
+                    <br><button (click)="delProduct(product)" mat-raised-button color="primary">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<br />
+
+<div *ngIf="productList.length > 0" class="centered">
+    <app-paging
+        [totalItem]="totalItem"
+        [pageSize]="pageSize"
+        [offset]="offset"
+        (onNextPageClick)="onNextPageClick($event)"
+        (onPreviousPageClick)="onPreviousPageClick($event)"
+        (onFirstPageClick)="onFirstPageClick($event)"
+        (onLastPageClick)="onLastPageClick($event)"
+    ></app-paging>
+</div>
+<br />
